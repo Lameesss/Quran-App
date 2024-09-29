@@ -103,7 +103,8 @@ const Navbar = () => {
       <nav className={`left-0 h-16 z-50 bg-dgreen text-white flex justify-between items-center p-4 fixed top-0 w-full transition-transform duration-700 ${isScrollingDown ? '-translate-y-full' : 'translate-y-0'}`}>
         <div className="flex items-center space-x-4">
           <FaBars className="cursor-pointer" onClick={toggleHamburger} />
-          <a href="/" className="text-xl md:text-2xl font-bold">Quran.com</a>
+          {/* Change href to NavLink */}
+          <NavLink to="/" className="text-xl md:text-2xl font-bold">Quran.com</NavLink>
         </div>
         <div className="flex items-center space-x-4">
           <div 
