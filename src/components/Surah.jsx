@@ -125,8 +125,8 @@ function Surah() {
         <div className="text-xl leading-relaxed max-w-3xl pt-20">
           {surah.ayahs.map((ayah, index) => (
             <div key={index} className="mb-8 border-b border-gray-300 pb-6">
-              <p className="mb-4 font-semibold" style={{ fontFamily: 'Amiri, serif', fontSize: '1.75rem' }} >
-                <strong>{ayah.numberInSurah}</strong>. {ayah.text}
+              <p className="mb-4 font-semibold text-quran" style={{ fontFamily: 'Amiri, serif', fontSize: '1.75rem' }}>
+                <span className="ayah-number">{ayah.numberInSurah}</span> {ayah.text}
               </p>
               {view === 'translation' && surah.translation[index] && (
                 <p className="text-lg font-semibold">
