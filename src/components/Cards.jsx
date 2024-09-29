@@ -7,7 +7,7 @@ const Cards = () => {
 
   useEffect(() => {
     // Fetch surah data from the API
-    axios.get('http://api.alquran.cloud/v1/surah')
+    axios.get('https://api.alquran.cloud/v1/surah')
       .then(response => {
         // Extract Surah data from the API response
         const surahData = response.data.data.map(surah => ({

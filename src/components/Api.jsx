@@ -5,7 +5,7 @@ function Api() {
   const [surahs, setSurahs] = useState([]);
 
   useEffect(() => {
-    axios.get('http://api.alquran.cloud/v1/quran/quran-uthmani')
+    axios.get('https://api.alquran.cloud/v1/quran/quran-uthmani')
       .then(response => {
         // Extract surah names and ayah texts from the response data
         const surahData = response.data.data.surahs.map(surah => ({

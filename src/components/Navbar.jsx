@@ -83,7 +83,7 @@ const Navbar = () => {
     setSearchQuery(query);
 
     if (query) {
-      axios.get('http://api.alquran.cloud/v1/surah')
+      axios.get('https://api.alquran.cloud/v1/surah')
         .then(response => {
           const filtered = response.data.data.filter(surah =>
             surah.englishName.toLowerCase().includes(query.toLowerCase())

@@ -19,7 +19,7 @@ function Surah() {
       try {
         setLoading(true);
 
-        const response = await axios.get(`http://api.alquran.cloud/v1/surah/${surahId}`);
+        const response = await axios.get(`https://api.alquran.cloud/v1/surah/${surahId}`);
         const surahData = {
           number: response.data.data.number,
           name: response.data.data.name,
@@ -29,7 +29,7 @@ function Surah() {
           }))
         };
 
-        const translationResponse = await axios.get('http://api.alquran.cloud/v1/quran/en.asad');
+        const translationResponse = await axios.get('https://api.alquran.cloud/v1/quran/en.asad');
         const translationData = translationResponse.data.data.surahs[surahId - 1].ayahs.map(ayah => ({
           numberInSurah: ayah.numberInSurah,
           text: ayah.text
